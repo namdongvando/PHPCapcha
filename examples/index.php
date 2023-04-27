@@ -48,7 +48,7 @@ if (isset($_POST["btn"])) {
             ?>
             <div class="form-group">
                 <label for="">Capcha</label>
-                <input type="text" name="capcha" required="" class="form-control" placeholder="Input field">
+                <input type="text" name="capcha" required="" class="form-control" placeholder="Input Capcha">
             </div>
             <button type="submit" name="btn" class="btn btn-primary">Submit</button>
         </form>

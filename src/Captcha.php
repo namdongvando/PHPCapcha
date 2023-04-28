@@ -1,22 +1,22 @@
 <?php
-namespace PHPCapcha;
+namespace PHPCaptcha;
 
-class Capcha
+class Captcha
 {
-    private static $security_code = "phpcapcha_namdong92@gmail.com_security_code";
+    private static $security_code = "phpcaptcha_namdong92@gmail.com_security_code";
     const permitted_chars = '0123456789ABCDEFGHJKLMNPQRSTUVWXYZ';
     public function __construct($config = null)
     {
-        self::$security_code = $config["Name"] ?? "phpcapcha_namdong92@gmail.com_security_code";
+        self::$security_code = $config["Name"] ?? "phpcaptcha_namdong92@gmail.com_security_code";
     }
 
-    public static function setName($name = "phpcapcha_namdong92@gmail.com_security_code")
+    public static function setName($name = "phpcaptcha_namdong92@gmail.com_security_code")
     {
         self::$security_code = $name;
     }
     private static function getName()
     {
-        return self::$security_code ?? "phpcapcha_namdong92@gmail.com_security_code";
+        return self::$security_code ?? "phpcaptcha_namdong92@gmail.com_security_code";
     }
     public static function getValue()
     {
@@ -116,7 +116,7 @@ class Capcha
         <img src="{$src}" {$propHtml} >        
 HTML;
     }
-    public static function CapchaElement($id, $linkImg, $prop = [])
+    public static function CaptchaElement($id, $linkImg, $prop = [])
     {
         $classicon = $prop["class-icon"] ?? "";
         $lblRefesh = "";

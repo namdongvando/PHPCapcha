@@ -1,12 +1,12 @@
 <?php
-include_once "../src/Capcha.php";
+include_once "../src/Captcha.php";
 session_start();
-use PHPCapcha\Capcha;
+use PHPCaptcha\Captcha;
 
 if (isset($_POST["btn"])) {
-    if ($_POST["capcha"] == Capcha::getValue()) {
-        var_dump($_POST["capcha"]);
-        var_dump(Capcha::getValue());
+    if ($_POST["captcha"] == Captcha::getValue()) {
+        var_dump($_POST["captcha"]);
+        var_dump(Captcha::getValue());
         echo "ok";
     }
 }
@@ -21,7 +21,7 @@ if (isset($_POST["btn"])) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PHP Capcha</title>
+    <title>PHP captcha</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -44,11 +44,11 @@ if (isset($_POST["btn"])) {
                 <input type="text" required="" value="email@dmail.abc" class="form-control">
             </div>
             <?php
-            echo Capcha::CapchaElement("idCapchaImg", "/examples/capcha.php?l=6&v=1", ["class-icon" => "glyphicon glyphicon-refresh"]);
+            echo captcha::captchaElement("idcaptchaImg", "/examples/captcha.php?l=6&v=1", ["class-icon" => "glyphicon glyphicon-refresh"]);
             ?>
             <div class="form-group">
-                <label for="">Capcha</label>
-                <input type="text" name="capcha" required="" class="form-control" placeholder="Input Capcha">
+                <label for="">captcha</label>
+                <input type="text" name="captcha" required="" class="form-control" placeholder="Input captcha">
             </div>
             <button type="submit" name="btn" class="btn btn-primary">Submit</button>
         </form>
